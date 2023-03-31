@@ -1,0 +1,160 @@
+ 
+ *{
+    box-sizing: border-box;
+ }
+
+html{
+    height: 100%;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    background-image: url("./images/back-to-future.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+ .container{ 
+
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 20px;
+} 
+.menu-btn{
+    box-shadow: 0px 0px 39px 24px rgba(255, 255, 255, 0.583);
+}
+.text-fw-500{
+    font-weight: 500;
+} 
+.game-title{ 
+
+   text-align: center; 
+   margin: 40px 0 40px; 
+   font-size: 38px;
+   font-weight: 700; 
+   color: aqua;
+}
+
+.start-select{
+    background-image: url("./images/arrw-to-bottom.svg");
+    background-size: 24px 24px;
+    border: none;
+    border-bottom: white solid 3px;
+}
+.start-select:focus{
+    box-shadow: 0px 0px 29px 18px rgba(255, 255, 255, 0.74);
+}
+
+.start-btn{
+    transition: box-shadow 0.3s ease;
+}
+.start-btn:hover{
+    box-shadow: 0px 0px 29px 18px rgba(255, 255, 255, 0.74);
+}
+
+.bg-grey{ 
+    background-color: #d7d9d6;
+} 
+
+.hide{
+    visibility: hidden;
+}
+
+.signs-images{
+    display: none;
+    width: 60px;
+    height: 60px;
+} 
+.sign-img{
+    transition: background-color 1s ease;
+    animation: correct-shaking 0.5s forwards;
+}
+.error-img{
+    transition: background-color 1s ease;
+    animation: error-shaking 0.35s forwards;
+}
+
+
+.sign-img .sign-img{
+    display: inline-block;
+}
+.error-img .err-img{
+    display: inline-block;
+}
+.sign-img ~ .sign-img{
+    display: inline-block;
+}
+.error-img ~ .err-img{
+    display: inline-block;
+}
+
+.box-disabled{
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: #ccc;
+}
+
+.game-box{
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/Game-Over.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game-img{
+    visibility: hidden;
+}
+
+.add-img{
+    visibility: visible;
+    
+}
+
+.game-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url("./images/replay.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.you-box{
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/Frame3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 982px) {
+    .signs-images{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media only screen and (max-width: 778px) {
+    .signs-images{
+        width:  30px;
+        height: 30px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .signs-images{
+        width: 15px;
+        height: 15px;
+    }
+}

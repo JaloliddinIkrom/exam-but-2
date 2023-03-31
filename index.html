@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam - 5 || Road Signs</title> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css"> 
+     
+</head>
+<body>
+
+ 
+    
+<main> 
+ 
+<section> 
+
+  <div class="container"> 
+   
+
+    <div class="js-menu position-absolute top-50 start-50 translate-middle">
+        <div class="d-flex flex-column align-items-center p-3">
+            <button class="js-menu-btn  menu-btn text-fw-500 py-2 px-3 border-0 text-danger fs-4 rounded-5" type="button">
+                Choose
+            </button>
+    
+            <a class="text-fw-500 d-inline-block mt-5 text-decoration-none text-danger fs-4" href="#">
+                Start
+            </a>
+            <a class="text-fw-500 d-inline-block mt-5 text-decoration-none text-danger fs-4" href="#">
+                Exit  
+            </a>
+        </div>
+    </div>  
+
+    <div class="js-start-menu position-absolute top-50 start-50 translate-middle d-none">
+        <form class="js-form d-flex flex-column align-items-center p-3" method="get" action="#" autocomplete="off">
+            <label class="text-danger fs-4 mb-4" for="level">Complexity</label>
+            <select class="js-complext-select start-select text-fw-500 fs-4 form-select form-select-lg
+             bg-transparent text-danger mb-5" id="level" aria-label="Choose Level">
+                <option class="text-warning" value="easy">Easy</option>
+                <option class="text-warning" value="medium">Medium</option>
+                <option class="text-warning" value="hard">Hard</option>
+            </select>
+            <label class="text-danger fs-4 mb-4" for="set_time">Time</label>
+            <select class="js-time-select start-select text-fw-500 fs-4 form-select 
+            form-select-lg bg-transparent text-danger mb-5" id="set_time" aria-label="Choose time">
+                <option class="text-warning" value="3-min">3 min</option>
+                <option class="text-warning" value="8-min">8 min</option>
+                <option class="text-warning" value="10-min">10 min</option>
+            </select>
+            <button class="start-btn d-block w-100 text-fw-500 fs-3 border-0 
+            py-2 px-3 rounded-5" type="submit">Start</button>
+        </form>
+    </div>  
+ 
+
+    
+    <div class="js-department-menu p-3 d-none ">
+
+        <div class="pt-4 js-department-menu-block  "> 
+         
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
+                <div class="d-flex flex-column flex-sm-row">
+                    <strong class="js-score me-3 text-primary">
+                        Score: 0
+                    </strong>
+                    <strong class="js-attempts me-3 text-primary">
+                        Attempts: 0
+                    </strong>
+                </div>
+                <strong class="js-time  text-danger">
+                    Осталось: 0
+                </strong>
+            </div> 
+
+             <div class="text-bg-info mb-3 px-1 py-3 rounded-3">
+            <p class="js-department-text text-center fs-5">
+
+            </p>
+             </div>
+        
+        </div>
+
+            <div class="text-bg-dark ms-sm-auto p-4 rounded-3">
+               
+                <ul class="js-list row gx-2 mb-0 list-unstyled mt-5">
+
+                </ul>
+            </div>
+       
+    </div>
+
+    <div class="js-game-box game-box d-none">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <img class="js-game-img game-img mx-auto img-fluid" src="./images/Game-Over-text.png" width="600" height="300" alt="images">
+            <div>
+                <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-center">
+                    <strong class="js-game-score me-3 fs-4 text-white">
+                        Score: 0
+                    </strong>
+                    <strong class="js-game-attempts me-3 fs-4 text-white">
+                        Attempts: 0
+                    </strong>
+                    <strong class="js-game-time fs-4 text-white">
+                        Осталось: 0
+                    </strong>
+                </div>
+                <button class="js-game-btn game-btn d-block mt-4 mx-auto border-0 bg-transparent">
+    
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-you-box you-box d-none">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="flex-column flex-md-row text-center text-md-start">
+                <strong class="js-you-score me-3 fs-4 text-white">
+                    Score: 0
+                </strong>
+                <strong class="js-you-attempts me-3 fs-4 text-white">
+                    Attempts: 0
+                </strong>
+                <strong class="js-you-time fs-4 text-white">
+                    Осталось: 0
+                </strong>
+            </div>
+            <button class="js-you-btn game-btn d-block mt-4 mx-auto border-0 bg-transparent">
+    
+            </button>
+        </div>
+    </div>
+
+    
+
+  </div>
+
+</section>
+  
+   <template class="js-template">
+    <li class="js-test-item col-6 col-md-3 col-lg-2 mb-3 d-flex align-items-stretch">
+        <div class="bg-info js-templet-btn position-relative d-flex align-items-center justify-content-center p-2 rounded-3">
+            <img class="js-images img-fluid" src="./images/signs/yol_bering.gif" alt="images">
+            <img class="js-answer-img signs-images sign-img position-absolute end-0 bottom-0 rounded-circle" src="./images/checkmark.gif" width="60" height="60" alt="images">
+            <img class="js-answer-img signs-images err-img position-absolute end-0 bottom-0 rounded-circle" src="./images/error.png" width="60" height="60" alt="images">
+        </div>
+    </li>
+   </template>
+
+</main>
+
+ 
+
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./signs.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
